@@ -4,7 +4,6 @@ import { createTransactionSchema } from '../models/create-transaction-schema'
 import { randomUUID } from 'crypto'
 import { getTransactionSchema } from '../models/get-transaction-schema'
 import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
-import { request } from 'http'
 
 export async function transactionsRoutes(app: FastifyInstance) {
   app.get('/', { preHandler: [checkSessionIdExists] }, async (request) => {
