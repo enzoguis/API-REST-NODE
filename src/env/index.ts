@@ -3,7 +3,6 @@ import { z } from 'zod'
 
 if (process.env.NODE_ENV === 'test') {
   config({ path: '.env.test' })
-  console.log('Using.env.test')
 } else {
   config()
 }
